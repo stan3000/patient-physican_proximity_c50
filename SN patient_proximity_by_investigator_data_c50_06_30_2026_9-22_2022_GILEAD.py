@@ -552,14 +552,14 @@ m
 
 
 
-# # GROUP DIFFICULTIES RECRUITING AND PHASE
+
 
 # In[36]:
 
-
+df8.dropna(subset=['icd10Code'])
 from wordcloud import WordCloud, STOPWORDS
 
-wordcloud=WordCloud(width =1000, height=500).generate(''.join(df['WhyStopped']))
+wordcloud=WordCloud(width =1000, height=500).generate(''.join(df['icd10Code']))
 plt.figure(figsize=(15,8))
 plt.imshow(wordcloud)
 plt.axis('off')
